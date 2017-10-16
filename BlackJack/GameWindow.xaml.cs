@@ -168,9 +168,10 @@ namespace BlackJack
         [ConditionalAttribute("DEBUG")]
         private void Debug()
         {
-            txtDebug.Text = Croupier.DeckString;
+            txtDebug.Text = "Deck: " + Croupier.DeckString;
             if (Croupier.DiscardedCount > 0)
             {
+                txtDebug.Text += "Discarded: ";
                 txtDebug.Text += "\n" + Croupier.DiscardedString;
             }
             txtDebug.Text = txtDebug.Text.Replace("c", "♣").Replace("d", "♦").Replace("h", "♥").Replace("s", "♠").ToUpper();
